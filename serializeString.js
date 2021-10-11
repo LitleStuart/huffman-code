@@ -5,15 +5,15 @@ function serializeString(str) {
     const char = str[i];
     if (chars.has(char)) {
       result.forEach((element) => {
-        if (element.char == char) {
+        if (element.name == char) {
           element.count += 1;
         }
       });
     } else {
-      result.push({ char: char, count: 1 });
+      result.push({ name: char, count: 1 });
       chars.add(char);
     }
   }
-  return result;
+  return result.sort((a, b) => a.count - b.count);
 }
 exports.serializeString = serializeString;
