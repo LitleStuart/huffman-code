@@ -10,7 +10,7 @@ function serializeString(str) {
         }
       });
     } else {
-      result.push({ name: char, count: 1 });
+      result.push({ name: char, count: 1, code: "" });
       chars.add(char);
     }
   }
