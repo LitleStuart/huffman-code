@@ -18,4 +18,15 @@ describe("serializeString", () => {
       { name: "c", count: 4, code: "" },
     ]);
   });
+
+  it("Сортированное представление строки вида {'char', 'count'}", () => {
+    const result = serializeString("aaaabbbccde");
+    expect(result).toEqual([
+      { name: "d", count: 1, code: "" },
+      { name: "e", count: 1, code: "" },
+      { name: "c", count: 2, code: "" },
+      { name: "b", count: 3, code: "" },
+      { name: "a", count: 4, code: "" },
+    ]);
+  });
 });

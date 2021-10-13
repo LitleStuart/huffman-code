@@ -4,9 +4,9 @@ const { getCodes } = require("./getCodes");
 describe("decode", () => {
   it("Декодирование", () => {
     const result = decode(
-      "#a00##b01##c10##d11#00000000010101101011",
-      getCodes("#a00##b01##c10##d11#00000000010101101011")
+      "#a1##b01##c000##d0011##e0010#111101010100000000110010",
+      getCodes("#a1##b01##c000##d0011##e0010#111101010100000000110010")
     );
-    expect(result).toBe("aaaabbbccd");
+    expect(result).toBe("aaaabbbccde");
   });
 });

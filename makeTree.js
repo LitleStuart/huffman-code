@@ -12,7 +12,7 @@ function makeTree(nodes) {
     b.parent = newNode.name;
     nodes.push(newNode);
     result.push(nodes.shift(), nodes.shift());
-    nodes.sort((a, b) => a.count - b.count);
+    nodes.sort((a, b) => a.count - b.count - 1);
   }
   result.push(nodes[0]);
   return result;
