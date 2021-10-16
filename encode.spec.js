@@ -9,8 +9,9 @@ describe("encode", () => {
       { char: "d", code: "0011" },
       { char: "e", code: "0010" },
     ]);
-    expect(result).toBe(
-      "#a1##b01##c000##d0011##e0010#111101010100000000110010"
-    );
+    expect(result).toEqual([
+      "111101010100000000110010",
+      "#a1#b01#c000#d0011#e0010",
+    ]);
   });
 });

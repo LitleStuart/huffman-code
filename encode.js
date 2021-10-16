@@ -1,6 +1,6 @@
 function encode(str, codes) {
-  let result = "";
-  codes.forEach(({ char, code }) => (result += `#${char}${code}#`));
+  let codeString = (result = "");
+  codes.forEach(({ char, code }) => (codeString += `#${char}${code}`));
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
     codes.forEach((element) => {
@@ -9,6 +9,6 @@ function encode(str, codes) {
       }
     });
   }
-  return result;
+  return [result, codeString];
 }
 exports.encode = encode;

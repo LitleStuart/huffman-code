@@ -11,7 +11,7 @@ function getCodes(str) {
         } else break;
       }
       result.push({ char: str[i + 1], code: code });
-      i += code.length + 2;
+      i += code.length + 1;
     } else break;
   }
   return result;
