@@ -5,9 +5,9 @@ const { setCodes } = require("./setCodes");
 const { getCodes } = require("./getCodes");
 const { encode } = require("./encode");
 const { decode } = require("./decode");
-const str = fs.readFileSync(process.argv[3]).toString();
 
 try {
+  const str = fs.readFileSync(process.argv[3]).toString();
   if (process.argv[2] == "code") {
     const a = encode(str, setCodes(makeTree(serializeString(str))));
     const result = a[0];
