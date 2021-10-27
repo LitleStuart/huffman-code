@@ -18,8 +18,8 @@ try {
     const codes = fs.readFileSync(process.argv[4]).toString();
     fs.writeFileSync(process.argv[5], decode(str, getCodes(codes)));
   } else {
-    console.log("Vvedi code or decode");
+    console.log("Enter code or decode");
   }
 } catch {
-  console.log("Incorrect input/output file");
+  console.log(`Try node huffman.js code input_file table_file output_file`);
 }
