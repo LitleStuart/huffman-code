@@ -3,9 +3,9 @@ function decode(str, codes) {
   let result = "";
   for (let i = 0; i < str.length; i++) {
     currentCode += str[i];
-    codes.forEach(({ char, code }) => {
-      if (currentCode == code) {
-        result += char;
+    codes.forEach((value, key) => {
+      if (currentCode === value) {
+        result += key;
         currentCode = "";
       }
     });

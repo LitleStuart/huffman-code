@@ -38,4 +38,9 @@ describe("decode", () => {
     const result = decode("0000", getCodes("#a0"));
     expect(result).toBe("aaaa");
   });
+
+  it("Декодирование", () => {
+    const result = decode("000100", getCodes("#a0# 1"));
+    expect(result).toBe("aaa aa");
+  });
 });

@@ -2,12 +2,13 @@ const { getCodes } = require("./getCodes");
 
 describe("getCodes", () => {
   it("Получение таблицы кодов для символов", () => {
-    const result = getCodes("#a00#b01#c10#d11");
-    expect(result).toEqual([
-      { char: "a", code: "00" },
-      { char: "b", code: "01" },
-      { char: "c", code: "10" },
-      { char: "d", code: "11" },
-    ]);
+    const result = getCodes("#a0#b1111#c1011#d1101# 1100");
+    expect(Object.fromEntries(result)).toEqual({
+      a: "0",
+      b: "1111",
+      c: "1011",
+      d: "1101",
+      " ": "1100",
+    });
   });
 });
